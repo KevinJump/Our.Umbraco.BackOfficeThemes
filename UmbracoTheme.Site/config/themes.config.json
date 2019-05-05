@@ -1,10 +1,5 @@
 {
-  "users": [
-    {
-      "userId": -1,
-      "theme": "dark"
-    }
-  ],
+  "users": [],
   "groups": [],
   "servers": [
     {
