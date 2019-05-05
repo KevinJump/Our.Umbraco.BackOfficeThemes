@@ -1,0 +1,26 @@
+:root {
+    --color-green-800: #2E7D32;
+    --color-green-900: #1B5E20;
+    --color-green-700: #388E3C;
+    --color-greena-700: #00C853;
+
+    --color-text-100: #ddd;
+    --color-text-200: #fff;
+}
+
+/* main nav */
+.umb-app-header {
+    background-color: var(--color-green-800);
+}
+
+ul.sections>li.current>a {
+    color: var(--color-text-200);
+}
+ul.sections>li>a {
+    color: var(--color-text-100);
+}
+
+ul.sections>li>a:after {
+    background-color: var(--color-greena-700);
+}
+

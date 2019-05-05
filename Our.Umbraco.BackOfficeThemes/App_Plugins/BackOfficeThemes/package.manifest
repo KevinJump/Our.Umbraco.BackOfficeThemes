@@ -1,0 +1,20 @@
+{
+  "javascript": [
+    "~/App_Plugins/BackOfficeThemes/themeService.js",
+    "~/App_Plugins/BackOfficeThemes/themeResource.js",
+    "~/App_Plugins/BackOfficeThemes/themeDashboardController.js",
+    "~/App_Plugins/BackOfficeThemes/themeloader.js"
+  ],
+  "css": [
+    "~/App_Plugins/BackofficeThemes/dashboard.css"
+  ],
+  
+  "dashboards": [
+    {
+      "alias": "backofficeThemeDashboard",
+      "view": "~/App_Plugins/BackOfficeThemes/dashboard.html",
+      "sections": [ "settings" ],
+      "weight": -10
+    }
+  ]
+}

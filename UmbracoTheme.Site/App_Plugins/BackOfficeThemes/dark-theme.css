@@ -1,0 +1,130 @@
+:root {
+    --color-100: #000000;
+    --color-200: #1E1E1E;
+    --color-300: #252525;
+    --color-400: #333333;
+    --color-410: #373737;
+    --color-420: #383838;
+    --color-430: #3C3C3C;
+    --color-500: #ABABAB;
+    --color-600: #CCCCCC;
+    --color-800: #FAFAFA;
+    --color-900: #ffffff;
+
+    --alt-100: #569CD6;
+}
+
+body {
+    color: var(--color-600);
+}
+
+
+/* main nav */
+.umb-app-header {
+    background-color: var(--color-430);
+}
+
+ul.sections>li.current>a {
+    color: var(--color-800);
+}
+ul.sections>li>a {
+    color: var(--color-600);
+}
+
+ul.sections>li>a:after {
+    background-color: var(--alt-100);
+}
+
+
+/* side nav */
+#navigation {
+    background-color: var(--color-300);
+}
+
+.umb-tree-item__inner, .umb-tree-root {
+    color: var(--color-900);
+}
+
+.umb-tree-icon { 
+    color: var(--color-500);
+}
+
+.umb-tree-item__inner a, .umb-tree-root a {
+    color: var(--color-600);
+}
+
+.umb-tree-item__inner:hover, .umb-tree-root:hover {
+    background-color: var(--color-430);
+    color: var(--color-800);
+}
+
+
+.umb-tree-item.active>.umb-tree-item__inner a
+{
+    color: var(--color-800);
+}
+
+.umb-tree-item.current>.umb-tree-item__inner {
+    background: var(--alt-100);
+}
+
+.umb-tree-item__inner:hover .umb-tree-icon, .umb-tree-root:hover .umb-tree-icon {
+    color: var(--color-800);
+}
+
+.umb-tree-item__inner:hover a, .umb-tree-root:hover a {
+    color: var(--color-800);
+}
+
+.umb-options:hover {
+    background-color: var(--color-200);
+}
+
+.umb-options i {
+    background-color: var(--color-500);  
+}
+
+.navigation-inner-container {
+    border-color: var(--color-430);
+}
+
+.umb-tree-item.current>.umb-tree-item__inner {
+    border-color: var(--color-200);
+    color: var(--color-800);
+    box-shadow: none;
+}
+
+.umb-tree-item.active>.umb-tree-item__inner:before {
+    border-color: var(--color-800);
+}
+
+/* modal popout */
+.umb-modalcolumn {
+    background-color: var(--color-300);
+}
+
+.umb-modalcolumn-body {
+    background-color: var(--color-300);   
+}
+
+.umb-action-link {
+    color: var(--color-600);
+}
+
+.umb-actions .sep, .umb-modalcolumn-header {
+    border-color: var(--color-430);
+}
+
+
+h5 {
+    color: var(--color-500);
+}
+
+.umb-actions-child .menu-label {
+    color: var(--color-500);
+}
+
+.umb-action-link:focus, .umb-action-link:hover, .umb-action.selected {
+    background-color: var(--color-430) !important;
+    color: var(--color-800) !important;
+}
