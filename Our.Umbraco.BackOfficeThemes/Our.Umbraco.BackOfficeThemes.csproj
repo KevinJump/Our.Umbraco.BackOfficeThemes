@@ -242,6 +242,8 @@
     <None Include="App_Plugins\BackOfficeThemes\themes\dark\theme.json" />
     <None Include="App_Plugins\BackOfficeThemes\themes\default\theme.json" />
     <None Include="App_Plugins\BackOfficeThemes\themes\greenbar\theme.json" />
+    <Content Include="Config\themes.config.json" />
+    <None Include="Our.Umbraco.BackOfficeThemes.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -261,6 +263,7 @@
     <Content Include="App_Plugins\BackOfficeThemes\themes\greenbar\theme.css" />
     <Content Include="App_Plugins\BackOfficeThemes\themes\greenbar\theme.js" />
     <Content Include="App_Plugins\BackOfficeThemes\themes\greenbar\theme.png" />
+    <Content Include="readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Umbraco.SqlServerCE.4.0.0.1\build\Umbraco.SqlServerCE.targets" Condition="Exists('..\packages\Umbraco.SqlServerCE.4.0.0.1\build\Umbraco.SqlServerCE.targets')" />

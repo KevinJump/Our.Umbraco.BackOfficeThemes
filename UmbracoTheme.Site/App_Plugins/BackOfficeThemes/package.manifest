@@ -14,7 +14,7 @@
       "alias": "backofficeThemeDashboard",
       "view": "~/App_Plugins/BackOfficeThemes/dashboard.html",
       "sections": [ "settings" ],
-      "weight": -10
+      "weight": 15
     }
   ]
 }

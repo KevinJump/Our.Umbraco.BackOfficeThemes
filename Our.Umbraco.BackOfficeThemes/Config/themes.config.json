@@ -1,0 +1,10 @@
+{
+  "users": [],
+  "groups": [],
+  "servers": [
+    {
+      "pattern": "^localhost.*$|^.*\\.local$",
+      "theme": "default"
+    }
+  ]
+}
