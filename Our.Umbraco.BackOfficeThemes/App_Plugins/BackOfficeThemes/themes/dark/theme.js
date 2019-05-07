@@ -1,1 +1,1 @@
-﻿
+﻿themeFavicon('BCBCBC');
