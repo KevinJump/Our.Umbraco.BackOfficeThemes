@@ -1,5 +1,6 @@
 {
   "javascript": [
+    "~/App_Plugins/BackOfficeThemes/faviconColours.js",
     "~/App_Plugins/BackOfficeThemes/themeService.js",
     "~/App_Plugins/BackOfficeThemes/themeResource.js",
     "~/App_Plugins/BackOfficeThemes/themeDashboardController.js",

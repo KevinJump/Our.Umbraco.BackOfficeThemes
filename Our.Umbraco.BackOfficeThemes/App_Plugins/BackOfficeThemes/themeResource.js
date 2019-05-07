@@ -73,8 +73,6 @@
                 }
             }
         }
-
-
     }
 
     angular.module('umbraco.resources')

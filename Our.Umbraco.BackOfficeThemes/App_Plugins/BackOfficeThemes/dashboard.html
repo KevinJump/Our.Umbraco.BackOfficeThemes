@@ -1,25 +1,118 @@
 ﻿<div ng-controller="backofficeThemeDashboardController as vm">
-    <umb-box>
-        <umb-box-header title="Backoffice Themes" description="Change the look and feel of the back office">
-            <button class="btn btn-info" ng-click="vm.reset()">Reset</button>
-        </umb-box-header>
-    </umb-box>
 
-    <div class="bo-theme-list-view">
-        <umb-box ng-repeat="theme in vm.themes" class="bo-theme-box">
-            <umb-box-header title="{{theme.name}}">
-                <strong ng-if="vm.current === theme.alias">(Current)</strong>
+    <div ng-if="!vm.viewAdmin">
+        <umb-box>
+            <umb-box-header title="Backoffice Themes" description="Change the look and feel of the back office">
+                <button class="btn btn-link" ng-click="vm.viewAdmin = !vm.viewAdmin" ng-if="vm.isAdmin">Admin Settings</button>
+                <button class="btn btn-info" ng-click="vm.reset()">Reset</button>
+            </umb-box-header>
+        </umb-box>
+
+        <div class="bo-theme-list-view">
+            <umb-box ng-repeat="theme in vm.themes" class="bo-theme-box">
+                <umb-box-header title="{{theme.name}}">
+                    <em>{{theme.alias}}</em>
+                    <strong ng-if="vm.current === theme.alias">(Current)</strong>
+                </umb-box-header>
+                <umb-box-content>
+                    <div>
+                        {{theme.description}}
+                    </div>
+                    <img class="theme-image" ng-src="{{theme.image}}" />
+                </umb-box-content>
+                <umb-box-content>
+                    <div class="text-right">
+                        <button ng-if="vm.current !== theme.alias" ng-click="vm.apply(theme.alias)" class="btn btn-success">Apply</button>
+                    </div>
+                </umb-box-content>
+            </umb-box>
+        </div>
+    </div>
+
+    <div ng-if="vm.viewAdmin">
+        <umb-box>
+            <umb-box-header title="Admin Settings"
+                            description="Things you can do because you are special">
+                <button class="btn btn-link" ng-click="vm.viewAdmin = !vm.viewAdmin" ng-if="vm.isAdmin">&larr; User Settings</button>
             </umb-box-header>
             <umb-box-content>
-                <div>
-                    {{theme.description}}
-                </div>
-                <img class="theme-image" ng-src="{{theme.image}}" />
+                As well as setting the theme per user, you can also set themes by group or server name.
             </umb-box-content>
-            <umb-box-content >
-                <div class="text-right">
-                    <button ng-if="vm.current !== theme.alias" ng-click="vm.apply(theme.alias)" class="btn btn-success">Apply</button>
+        </umb-box>
+
+        <umb-box>
+            <umb-box-header title="Group Themes"
+                            description="Themes set per user group"></umb-box-header>
+            <umb-box-content>
+                Group themes will be applied for every user in a group. The groups are searched in order so if the user is in two groups
+                the theme of first one found in the config will be used.
+            </umb-box-content>
+            <umb-box-content>
+                <div class="bo-theme-admin-settings">
+                    <div>
+                        <textarea name="serverConfig"
+                                  validate-on="'blur'"
+                                  rows="20" class="umb-property-editor umb-textarea"
+                                  umb-raw-model="vm.config.groups"></textarea>
+                    </div>
+                    <div>
+                        <p>
+                            Array of group objects with group / theme values
+                        </p>
+                        <pre>[
+  {
+    "group": "example_group",
+    "theme": "dark"
+  }
+]</pre>
+                    </div>
                 </div>
+                
+            </umb-box-content>
+        </umb-box>
+
+
+        <umb-box>
+            <umb-box-header title="Server Themes"
+                            description="Themes set by server address"></umb-box-header>
+            <umb-box-content>
+                Just like CMS Enviroment Indicator, you can have diffrent themes per server location. Server locations are found using 
+                regular expressions. like with groups the first one found is used 
+            </umb-box-content>
+            <umb-box-content>
+                <div class="bo-theme-admin-settings">
+
+                    <div>
+                        <textarea name="serverConfig"
+                                  validate-on="'blur'"
+                                  rows="20" class="umb-property-editor umb-textarea"
+                                  umb-raw-model="vm.config.servers"></textarea>
+                    </div>
+
+                    <div>
+                        <p>
+                            An array of objects containing pattern / theme settings.
+                        </p>
+                        <pre>[{ 
+    "pattern": "^localhost.*$|^.*\\.local$",
+    "theme": "default"
+  }]</pre>
+                    </div>
+                </div>
+            </umb-box-content>
+        </umb-box>
+
+        <umb-box>
+            <umb-box-content>
+
+                <umb-button action="vm.saveConfig()"
+                            type="button"
+                            button-style="action"
+                            state="vm.buttonState"
+                            shortcut="ctrl+s"
+                            label="Save"
+                            disabled="vm.buttonState === 'busy'">
+                </umb-button>
             </umb-box-content>
         </umb-box>
     </div>

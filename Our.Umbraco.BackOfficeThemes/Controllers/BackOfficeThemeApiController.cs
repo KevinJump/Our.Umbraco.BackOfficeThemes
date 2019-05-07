@@ -110,11 +110,14 @@ namespace Our.Umbraco.BackOfficeThemes.Controllers
             return new ThemeConfig();
         }
 
-        private void SaveConfig(ThemeConfig config)
+        [HttpPost]
+        public void SaveConfig(ThemeConfig config)
         {
             var configFile = UmbracoIO.IOHelper.MapPath("~/config/themes.config.json");
             var content = JsonConvert.SerializeObject(config, Formatting.Indented);
             File.WriteAllText(configFile, content);
+
+            Services.ContentService.()
         }
 
         private string GetRelativeUrl(FileInfo folder, string file)
