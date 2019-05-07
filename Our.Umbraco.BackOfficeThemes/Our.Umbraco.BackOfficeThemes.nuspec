@@ -8,7 +8,9 @@
     <owners>Umbraco Community</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Themes for Umbraco 8 backoffice, by user, group or server</description>
-    <releaseNotes>1.0 Initial Release</releaseNotes>
+    <releaseNotes>1.0 Initial Release
+1.1. Added admin dashboard to let you set group / server colours
+     Added favicon script</releaseNotes>
   </metadata>
   <files>
     <file src="readme.txt" target="" />
