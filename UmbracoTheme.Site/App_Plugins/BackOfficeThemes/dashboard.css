@@ -16,3 +16,20 @@
 .bo-theme-box img {
     padding: 10px;
 }
+
+
+.bo-theme-admin-settings {
+    display: flex;
+    margin-left: -20px;
+    margin-right: -20px
+}
+
+.bo-theme-admin-settings > div {
+    width: 50%; 
+    padding: 10px 20px
+}
+
+.bo-theme-admin-settings textarea {
+    width: 100%;
+    height: 200px;
+}

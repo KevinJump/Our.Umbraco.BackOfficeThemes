@@ -7,6 +7,7 @@
 
         var service = {
             getConfig: getConfig,
+            saveConfig: saveConfig,
             getThemes: getThemes,
             applyTheme: applyTheme,
             resetTheme: resetTheme
@@ -32,6 +33,10 @@
 
         function resetTheme() {
             return $http.put(serviceRoot + 'ResetTheme/');
+        }
+
+        function saveConfig(config) {
+            return $http.post(serviceRoot + "SaveConfig/", config);
         }
 
     }

@@ -429,3 +429,8 @@ a:focus, a:hover {
  .umb-package-list__item-name {
      color: var(--color-600);
  }
+
+ pre {
+     background-color: var(--color-100);
+     color: var(--color-800);
+ }

@@ -1,9 +1,27 @@
 {
-  "users": [],
-  "groups": [],
+  "users": [
+    {
+      "userId": -1,
+      "theme": "GreenBar"
+    }
+  ],
+  "groups": [
+    {
+      "group": "example_group",
+      "theme": "default"
+    }
+  ],
   "servers": [
     {
       "pattern": "^localhost.*$|^.*\\.local$",
+      "theme": "default"
+    },
+    {
+      "pattern": "^dev-.*\\.umbraco\\.io$",
+      "theme": "default"
+    },
+    {
+      "pattern": "^stage-.*\\.umbraco\\.io$",
       "theme": "default"
     }
   ]
