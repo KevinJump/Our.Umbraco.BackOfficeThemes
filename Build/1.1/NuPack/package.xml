@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<umbPackage>
+  <files>
+    <file>
+      <guid>/content/App_Plugins/BackOfficeThemes/dark-theme.css</guid>
+      <orgPath>~/App_Plugins/BackOfficeThemes</orgPath>
+      <orgName>dark-theme.css</orgName>
+    </file>
+    <file>
+      <guid>/lib/net472/Our.Umbraco.BackOfficeThemes.dll</guid>
+      <orgPath>~/bin</orgPath>
+      <orgName>Our.Umbraco.BackOfficeThemes.dll</orgName>
+    </file>
+    <file>
+      <guid>/content/config/themes.config.json</guid>
+      <orgPath>~/config</orgPath>
+      <orgName>themes.config.json</orgName>
+    </file>
+  </files>
+  <info>
+    <package>
+      <name>Umbraco Backoffice Themes</name>
+      <version>1.1.0</version>
+      <iconUrl></iconUrl>
+      <license url="http://opensource.org/licenses/MIT">MIT License</license>
+      <url>http://jumoo.co.uk</url>
+      <requirements type="Strict">
+        <major>8</major>
+        <minor>0</minor>
+        <patch>0</patch>
+      </requirements>
+    </package>
+    <author>
+      <name>Kevin Jump</name>
+      <website>http://jumoo.co.uk</website>
+    </author>
+    <contributors></contributors>
+    <readme><![CDATA[Change the colour scheme of Umbraco via a settings dashboard]]></readme>
+  </info>
+  <DocumentTypes />
+  <Templates />
+  <Stylesheets />
+  <Macros />
+  <DictionaryItems />
+  <Languages />
+  <DataTypes />
+  <Actions />
+</umbPackage>

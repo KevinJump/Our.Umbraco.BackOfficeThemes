@@ -116,8 +116,6 @@ namespace Our.Umbraco.BackOfficeThemes.Controllers
             var configFile = UmbracoIO.IOHelper.MapPath("~/config/themes.config.json");
             var content = JsonConvert.SerializeObject(config, Formatting.Indented);
             File.WriteAllText(configFile, content);
-
-            Services.ContentService.()
         }
 
         private string GetRelativeUrl(FileInfo folder, string file)
