@@ -4,6 +4,7 @@
     --color-300: #252525;
     --color-400: #333333;
     --color-410: #373737;
+    --color-415: #3f3f3f;
     --color-420: #383838;
     --color-430: #3C3C3C;
     --color-500: #ABABAB;
@@ -344,6 +345,14 @@ input.umb-editor-header__name-input:disabled {
 
 .umb-sub-views-nav-item__anchor_dropdown li.is-active a {
     border-color: var(--alt-100);
+}
+
+.umb-group-builder__group {
+    background-color: var(--color-415);
+}
+
+.umb-group-builder__property-meta-description textarea {
+    color: var(--color-800);
 }
 
 /* grid */
