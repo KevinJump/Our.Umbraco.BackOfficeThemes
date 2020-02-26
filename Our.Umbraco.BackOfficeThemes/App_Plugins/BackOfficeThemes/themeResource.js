@@ -52,8 +52,6 @@
 
             function checkGroups(config) {
                 if (config === undefined) return undefined;
-
-                console.log(userInfo);
                 for (var i in config) {
                     if (userInfo.userGroups.indexOf(config[i].group) !== -1) {
                         return config[i].theme;
