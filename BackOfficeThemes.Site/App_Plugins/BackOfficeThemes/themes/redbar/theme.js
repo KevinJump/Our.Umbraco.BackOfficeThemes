@@ -1,0 +1,1 @@
+themeFavicon('B71C1C');

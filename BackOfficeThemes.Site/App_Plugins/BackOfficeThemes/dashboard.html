@@ -1,0 +1,30 @@
+<div ng-controller="backofficeThemeDashboardController as vm">
+
+    <umb-box>
+        <umb-box-header title="Backoffice Themes" description="Change the look and feel of the back office">
+            <button class="btn btn-link" ng-click="vm.viewAdmin = !vm.viewAdmin" ng-if="vm.isAdmin">Admin Settings</button>
+            <button class="btn btn-info" ng-click="vm.reset()">Reset</button>
+        </umb-box-header>
+    </umb-box>
+
+    <div class="bo-theme-list-view">
+        <umb-box ng-repeat="theme in vm.themes" class="bo-theme-box">
+            <umb-box-header title="{{theme.name}}">
+                <em>{{theme.alias}}</em>
+                <strong ng-if="vm.current === theme.alias">(Current)</strong>
+            </umb-box-header>
+            <umb-box-content>
+                <div>
+                    {{theme.description}}
+                </div>
+                <img class="theme-image" ng-src="{{theme.image}}" />
+            </umb-box-content>
+            <umb-box-content>
+                <div class="text-right">
+                    <button ng-if="vm.current !== theme.alias" ng-click="vm.apply(theme.alias)" class="btn btn-success">Apply</button>
+                </div>
+            </umb-box-content>
+        </umb-box>
+    </div>
+</div>
+

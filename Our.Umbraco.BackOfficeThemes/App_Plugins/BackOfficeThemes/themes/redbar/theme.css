@@ -1,0 +1,25 @@
+:root {
+    --color-700: #D32F2F;
+    --color-800: #C62828;
+    --color-900: #B71C1C;
+    --color-alt-700: #D50000;
+    --color-text-100: #222;
+    --color-text-200: #fff;
+}
+
+/* main nav */
+.umb-app-header {
+    background-color: var(--color-800);
+}
+
+ul.sections>li.current>a {  
+    color: var(--color-text-200);
+}
+ul.sections>li>a {
+    color: var(--color-text-100);
+}
+
+ul.sections>li>a:after {
+    background-color: var(--color-alt-700);
+}
+

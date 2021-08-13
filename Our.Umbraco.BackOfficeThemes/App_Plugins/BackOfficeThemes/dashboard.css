@@ -1,0 +1,35 @@
+﻿.bo-theme-list-view {
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.bo-theme-box {
+    max-width: 100%;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.bo-theme-box img {
+    padding: 10px;
+}
+
+
+.bo-theme-admin-settings {
+    display: flex;
+    margin-left: -20px;
+    margin-right: -20px
+}
+
+.bo-theme-admin-settings > div {
+    width: 50%; 
+    padding: 10px 20px
+}
+
+.bo-theme-admin-settings textarea {
+    width: 100%;
+    height: 200px;
+}

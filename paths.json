@@ -1,0 +1,9 @@
+{
+    "sources" : [ 
+      "Our.Umbraco.BackOfficeThemes/App_Plugins"
+    ],
+    "destinations" : [
+      "BackOfficeThemes.Site/App_Plugins"
+    ]
+}
+  

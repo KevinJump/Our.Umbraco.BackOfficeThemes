@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net5.0;net472</TargetFrameworks>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<Product>Our.Umbraco.BackOfficeThemes</Product>
+		<PackageId>Our.Umbraco.BackOfficeThemes</PackageId>
+
+		<Title>BackOffice Themes for Umbraco</Title>
+		<Authors>Kevin Jump</Authors>
+
+		<PackageIconUrl></PackageIconUrl>
+		<PackageLicenceExpression>MIT</PackageLicenceExpression>
+		<PackageProjectUrl>https://github.com/KevinJump/Our.Umbraco.BackOfficeThemes</PackageProjectUrl>
+		<PackageTags>Umbraco</PackageTags>
+
+		<Description>Themes for the Umbraco Backoffice - set per user.</Description>
+		<PackageReleaseNotes>
+			1.0 Initial Release
+			2.0 - DB Version, Targets both Umbraco v8 and v9
+		</PackageReleaseNotes>
+
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<IncludeSymbols>false</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	</PropertyGroup>
+
+
+	<ItemGroup Condition="$(TargetFramework) == 'net5.0'">
+		<PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.0.0-preview20210812.69735" />
+	</ItemGroup>
+
+	<ItemGroup Condition="$(TargetFramework) == 'net472'">
+		<PackageReference Include="UmbracoCms.Web" Version="8.16.0-rc" />
+		<PackageReference Include="UmbracoCms.Core" Version="8.16.0-rc" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<None Include="buildTransitive\**\*.*">
+			<Pack>true</Pack>
+			<PackagePath>buildTransitive</PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="App_Plugins\BackOfficeThemes\**\*.*">
+			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+			<CopyToPublishDirectory>Always</CopyToPublishDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="App_Plugins\BackOfficeThemes\user-dash.html" />
+	  <Content Remove="App_Plugins\BackOfficeThemes\userDashboardController.js" />
+	</ItemGroup>
+
+	<!-- Workaround for this bug (replace the analyzer name with the one you need to exclude (filename only, no extension) -->
+	<Target Name="RemoveLuceneAnalyzer" BeforeTargets="CoreCompile">
+		<ItemGroup>
+			<Analyzer Remove="@(Analyzer)" Condition="%(FileName) == 'Lucene.Net.CodeAnalysis.CSharp'" />
+		</ItemGroup>
+	</Target>
+
+</Project>

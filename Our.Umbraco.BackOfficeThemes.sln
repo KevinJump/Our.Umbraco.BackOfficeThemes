@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31605.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackOfficeThemes.Site", "BackOfficeThemes.Site\BackOfficeThemes.Site.csproj", "{47CB39FE-4AAB-40FF-A845-0C593AB6127E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Our.Umbraco.BackOfficeThemes", "Our.Umbraco.BackOfficeThemes\Our.Umbraco.BackOfficeThemes.csproj", "{4D480C22-4385-455E-A0E4-08F3345CAF9E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47CB39FE-4AAB-40FF-A845-0C593AB6127E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47CB39FE-4AAB-40FF-A845-0C593AB6127E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47CB39FE-4AAB-40FF-A845-0C593AB6127E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47CB39FE-4AAB-40FF-A845-0C593AB6127E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D480C22-4385-455E-A0E4-08F3345CAF9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D480C22-4385-455E-A0E4-08F3345CAF9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D480C22-4385-455E-A0E4-08F3345CAF9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D480C22-4385-455E-A0E4-08F3345CAF9E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B9A8000-1678-4349-BB40-EB79A78A08A2}
+	EndGlobalSection
+EndGlobal

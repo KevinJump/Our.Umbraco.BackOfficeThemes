@@ -1,0 +1,1 @@
+﻿themeFavicon('388E3C');
