@@ -635,3 +635,12 @@ table thead a {
 .umb-dashboard-grid .intro-text {
     color: var(--color-600) !important;
 }
+
+
+.mce-content-body,
+.mce-panel,
+div.mce-edit-area,
+.mce-container, .mce-container *, .mce-widget, .mce-widget *, .mce-reset {
+    color: var(--color-800) !important;
+    background-color: var(--color-400) !important;
+}

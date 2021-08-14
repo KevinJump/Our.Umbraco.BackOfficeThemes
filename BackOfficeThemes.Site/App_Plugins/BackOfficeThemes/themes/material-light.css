@@ -1,0 +1,288 @@
+/*
+    shared settings for a light theme using 
+    material colour schemes .
+*/
+
+:root {
+    --color-text-dark: #000000;
+    --color-text-light: #eeeeee;
+    --color-text-black: #000000;
+    --color-text-dark: #212121;
+    --color-text-muted: #757575;
+    --color-text-light: #fafafa;
+    --color-text-white: #ffffff;
+    /* material default body colours */
+    --color-body-light: #F5F5F6;
+    --color-body-dark: #E1E2E1;
+}
+
+body {
+    background-color: var(--color-body-light);
+    color: var(--color-primary-dark);
+}
+
+/* main nav */
+.umb-app-header {
+    background-color: var(--color-primary);
+}
+
+ul.sections > li.current > a {
+    color: var(--color-primary-text);
+}
+
+ul.sections > li > a {
+    color: var(--color-primary-text);
+}
+
+    /* main nav - selected item bottom line */
+    ul.sections > li > a:after {
+        background-color: var(--color-secondary);
+    }
+
+
+/* side nav */
+#navigation {
+    background-color: var(--color-body-dark);
+}
+
+.umb-tree-item__inner, .umb-tree-root, .umb-action-link {
+    color: var(--color-primary-dark);
+}
+
+    .umb-tree-item__inner, .umb-tree-root h5 {
+        color: var(--color-primary-dark);
+    }
+
+.umb-tree-icon {
+    color: var(--color-secondary);
+}
+
+.umb-tree-item__inner a, .umb-tree-root a {
+    color: var(--color-primary-dark);
+}
+
+.umb-tree-item__inner:hover,
+.umb-tree-root:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-secondary-text);
+}
+
+    .umb-tree-item__inner:hover a,
+    .umb-tree-root:hover a {
+        color: var(--color-secondary-text);
+    }
+
+    .umb-tree-item__inner:hover .umb-tree-icon,
+    .umb-tree-root:hover .umb-tree-icon {
+        color: var(--color-secondary-text);
+    }
+
+    .umb-tree-item__inner:hover .umb-button-ellipsis,
+    .umb-tree-root:hover .umb-button-ellipsis {
+        color: var(--color-secondary-text) !important;
+    }
+
+.umb-tree-item.active > .umb-tree-item__inner a {
+    color: var(--color-text-dark);
+}
+
+.umb-tree-item.current > .umb-tree-item__inner,
+.umb-tree-item.current > .umb-tree-item__inner .umb-tree-icon,
+.umb-tree-item.current > .umb-tree-item__inner .umb-tree-item__arrow,
+.umb-tree-item.current > .umb-tree-item__inner a {
+    background: var(--color-secondary);
+    color: var(--color-secondary-text) !important;
+}
+
+.umb-options:hover {
+    background-color: var(--color-secondary);
+}
+
+.umb-options i {
+    background-color: var(--color-secondary);
+}
+
+.umb-tree-item.current > .umb-tree-item__inner {
+    border-color: var(--color-secondary);
+    color: var(--color-secondary-text);
+    box-shadow: none;
+}
+
+.umb-tree-item.active > .umb-tree-item__inner:before {
+    border-color: var(--color-secondaryt-text);
+}
+
+
+/* dashboard(s) */
+
+.umb-tab-button {
+    color: var(--color-primary-dark);
+}
+
+    .umb-tab--active > .umb-tab-button,
+    .umb-tab-button:hover {
+        color: var(--color-primary);
+    }
+
+    .umb-tab-button:after {
+        background-color: var(--color-secondary);
+    }
+
+.umb-panel-group__details-group-title {
+    background-color: var(--color-secondary);
+    color: var(--color-secondary-text);
+}
+
+/* content/media/page */
+
+.umb-group-panel__header, .control-label, label.control-label {
+    color: var(--color-primary-dark);
+}
+
+/* content app icons (subviews)*/
+
+.umb-sub-views-nav-item > a,
+.umb-sub-views-nav-item__action,
+.btn-white {
+    color: var(--color-primary-dark);
+}
+
+    .umb-sub-views-nav-item > a:before,
+    .umb-sub-views-nav-item__action:before {
+        background-color: var(--color-secondary);
+    }
+
+    .umb-sub-views-nav-item > a.is-active, .umb-sub-views-nav-item__action.is-active {
+        color: var(--color-secondary) !important;
+    }
+
+    .umb-sub-views-nav-item > a:hover, .umb-sub-views-nav-item__action:hover {
+        color: var(--color-secondary) !important;
+    }
+
+    .btn-white:focus, .btn-white:hover {
+        color: var(--color-secondary) !important;
+    }
+
+/* drop downs */
+.dropdown-menu > li > a, .dropdown-menu > li > button {
+    color: var(--color-primary-dark);
+}
+
+    .dropdown-menu > li > a:hover,
+    .dropdown-menu > li > button:hover,
+    .dropdown-submenu:hover > a,
+    .dropdown-submenu:hover > button {
+        background-color: var(--color-secondary);
+        color: var(--color-secondary-text);
+    }
+
+/* umb-box */
+.umb-box-header-title, input.umb-group-builder__group-title-input {
+    color: var(--color-primary-dark);
+}
+
+/* media */
+.umb-cropper-gravity .overlay .focalPoint {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary-light);
+}
+
+/* item selection box */
+.umb-editor-sub-header.--state-selection {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}
+
+
+/* settings things */
+/* buttons / icons etc that you can hover/select */
+.h5, h5,
+.umb-group-builder__group-remove,
+.umb-group-builder__property-action button.btn-icon {
+    color: var(--color-primary);
+}
+
+    .umb-group-builder__group-remove:hover,
+    .umb-group-builder__property-action button.btn-icon:focus,
+    .umb-group-builder__property-action button.btn-icon:hover {
+        color: var(--color-secondary);
+    }
+
+
+
+.btn-outline,
+.umb-group-builder__group-add-property,
+.content-type-editor-dialog.edit-property-settings .editor-placeholder,
+.umb-card-grid .umb-card-grid-item-slot > span,
+.umb-group-builder__group.-placeholder,
+.list-view-add-layout,
+.umb-multiple-textbox .add-link,
+.umb-node-preview-add,
+.umb-layout-selector__active-layout {
+    color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}
+
+    .btn-outline:hover,
+    .umb-group-builder__group-add-property:hover,
+    .content-type-editor-dialog.edit-property-settings .editor-placeholder:hover,
+    .umb-card-grid .umb-card-grid-item:hover,
+    .umb-card-grid .umb-card-grid-item-slot:focus > span,
+    .umb-card-grid .umb-card-grid-item-slot:hover > span,
+    .umb-group-builder__group.-placeholder:hover,
+    .list-view-add-layout:hover,
+    .umb-multiple-textbox .add-link:hover,
+    .umb-node-preview-add:hover,
+    .umb-layout-selector__active-layout:hover {
+        color: var(--color-secondary);
+        border-color: var(--color-secondary);
+    }
+
+/* toggles */
+.umb-toggle.umb-toggle--checked .umb-toggle__toggle,
+.umb-checkmark--checked {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+/* border changes on hover */
+.umb-package-link:hover,
+.umb-panel-header-icon:hover {
+    border-color: var(--color-secondary);
+}
+
+.umb-media-grid__item.-selectable:hover .umb-media-grid__item-select,
+.umb-media-grid__item.-selected .umb-media-grid__item-select {
+    box-shadow: 0 0 4px 0 var(--color-secondary), inset 0 0 2px 0 var(--color-secondary)
+}
+
+.umb-file-dropzone .file-select:hover {
+    color: var(--color-secondary);
+}
+
+.umb-mini-search .icon {
+    color: var(--color-primary);
+}
+
+
+.btn-link {
+    color: var(--color-primary-dark);
+}
+
+    .btn-link:hover {
+        color: var(--color-secondary);
+    }
+
+/* log search drop down */
+.umb-variant-switcher__item .umb-variant-switcher__name-wrapper:hover .umb-variant-switcher__name,
+.umb-variant-switcher__item .umb-variant-switcher__name-wrapper:hover .umb-variant-switcher__state {
+    color: var(--color-secondary-text);
+}
+
+.table-hover tbody tr:hover > td,
+.table-hover tbody tr:hover > th,
+.table-striped tbody > tr:nth-child(odd) > td,
+.table-striped tbody > tr:nth-child(odd) > th {
+    background-color: var(--color-secondary-light);
+    color: var(--color-secondary-light-text);

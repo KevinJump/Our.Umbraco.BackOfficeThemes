@@ -1,1 +1,0 @@
-themeFavicon('EF6C00');

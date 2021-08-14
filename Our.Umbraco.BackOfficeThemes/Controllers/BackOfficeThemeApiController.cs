@@ -48,7 +48,7 @@ namespace Our.Umbraco.BackOfficeThemes.Controllers
 
         [HttpGet]
         public IEnumerable<ThemeInfo> GetThemes()
-            => _themeService.GetThemes();
+            => _themeService.GetThemes().OrderBy(x => x.Name);
 
 
         [HttpPut]
@@ -61,25 +61,28 @@ namespace Our.Umbraco.BackOfficeThemes.Controllers
         [HttpGet]
         public string GetCurrentTheme()
         {
+            if (!_themeService.Enabled)
+                return _themeService.DefaultTheme;
+
             var userId = GetCurrentUserId();
             var theme = _themeService.GetSettings(userId);
 
-            return theme?.ThemeAlias ?? string.Empty;
+            return theme?.ThemeAlias ?? _themeService.DefaultTheme;
         }
 
         [HttpGet]
         public  ThemeInfo GetCurrentThemeInfo()
         {
+            if (!_themeService.Enabled)
+                return _themeService.GetTheme(_themeService.DefaultTheme);
+
             var userId = GetCurrentUserId();
             var theme = _themeService.GetSettings(userId);
 
             if (!string.IsNullOrWhiteSpace(theme?.ThemeAlias))
-            {
-                var allThemes = GetThemes();
-                return allThemes.FirstOrDefault(x => x.Alias == theme.ThemeAlias);
-            }
+                return _themeService.GetTheme(theme?.ThemeAlias);
 
-            return null;
+            return _themeService.GetTheme(_themeService.DefaultTheme);
 
         }
 

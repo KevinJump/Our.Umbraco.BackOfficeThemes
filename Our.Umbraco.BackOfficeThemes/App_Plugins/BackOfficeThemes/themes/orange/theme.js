@@ -1,0 +1,1 @@
+﻿themeFavicon('bf360c');

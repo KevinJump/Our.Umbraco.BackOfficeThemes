@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <language>
   <area alias="dashboardTabs">
-    <key alias="backofficeThemeDashboard">Themes</key>
+	  <key alias="backofficeThemeDashboard">Themes</key>
+	  <key alias="backOfficeThemeUserDashboard">Themes</key>
   </area>
 </language>

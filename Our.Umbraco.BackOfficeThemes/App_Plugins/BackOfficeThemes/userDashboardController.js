@@ -10,10 +10,12 @@
         vm.apply = apply;
         vm.reset = reset;
 
+        vm.enabled = Umbraco.Sys.ServerVariables.backOfficeThemes.enabled;
+
         vm.theme = {
-            name: 'Default',
-            image: '/App_Plugins/BackOfficeThemes/Themes/default/theme.png',
-            description: 'The default Umbraco colours'
+            name:  Umbraco.Sys.ServerVariables.backOfficeThemes.default,
+            image: Umbraco.Sys.ServerVariables.backOfficeThemes.themeFolder + '/default/theme.png',
+            description: 'The current default theme'
         };
 
         init();

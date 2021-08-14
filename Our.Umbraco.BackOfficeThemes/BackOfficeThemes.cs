@@ -33,7 +33,9 @@ namespace Our.Umbraco.BackOfficeThemes
         {
             builder.Services.AddUnique<IBackOfficeThemesRepository, BackOfficeThemesRepository>();
             builder.Services.AddUnique<BackOfficeThemeService>();
-            builder.AddNotificationHandler<UmbracoApplicationStartingNotification, AppStartingNotification>();
+
+            builder.AddNotificationHandler<UmbracoApplicationStartingNotification, BackOfficeNotificationHandler>();
+            builder.AddNotificationHandler<ServerVariablesParsingNotification, BackOfficeNotificationHandler>();
         }
 #else
 

@@ -57,6 +57,26 @@
 	  <Content Remove="App_Plugins\BackOfficeThemes\userDashboardController.js" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Remove="App_Plugins\BackOfficeThemes\themes\green - Copy (2)\theme.css" />
+	  <None Remove="App_Plugins\BackOfficeThemes\themes\green - Copy (2)\theme.js" />
+	  <None Remove="App_Plugins\BackOfficeThemes\themes\green - Copy (2)\theme.json" />
+	  <None Remove="App_Plugins\BackOfficeThemes\themes\green - Copy (2)\theme.png" />
+	  <None Remove="App_Plugins\BackOfficeThemes\themes\blue\theme.css" />
+	  <None Remove="App_Plugins\BackOfficeThemes\themes\blue\theme.js" />
+	  <None Remove="App_Plugins\BackOfficeThemes\themes\blue\theme.json" />
+	  <None Remove="App_Plugins\BackOfficeThemes\themes\blue\theme.png" />
+	  <None Remove="App_Plugins\BackOfficeThemes\themes\material-light.css" />
+	  <None Remove="App_Plugins\BackOfficeThemes\themes\orange\theme.css" />
+	  <None Remove="App_Plugins\BackOfficeThemes\themes\orange\theme.js" />
+	  <None Remove="App_Plugins\BackOfficeThemes\themes\orange\theme.json" />
+	  <None Remove="App_Plugins\BackOfficeThemes\themes\orange\theme.png" />
+	  <None Remove="App_Plugins\BackOfficeThemes\themes\green\theme.css" />
+	  <None Remove="App_Plugins\BackOfficeThemes\themes\green\theme.js" />
+	  <None Remove="App_Plugins\BackOfficeThemes\themes\green\theme.json" />
+	  <None Remove="App_Plugins\BackOfficeThemes\themes\green\theme.png" />
+	</ItemGroup>
+
 	<!-- Workaround for this bug (replace the analyzer name with the one you need to exclude (filename only, no extension) -->
 	<Target Name="RemoveLuceneAnalyzer" BeforeTargets="CoreCompile">
 		<ItemGroup>

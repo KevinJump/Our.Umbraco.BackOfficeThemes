@@ -41,6 +41,9 @@
     <ItemGroup>
       <ProjectReference Include="..\Our.Umbraco.BackOfficeThemes\Our.Umbraco.BackOfficeThemes.csproj" />
     </ItemGroup>
+    <ItemGroup>
+      <Folder Include="App_Plugins\" />
+    </ItemGroup>
 
     <!-- Set this to true if ModelsBuilder mode is not InMemoryAuto-->
     <PropertyGroup>
