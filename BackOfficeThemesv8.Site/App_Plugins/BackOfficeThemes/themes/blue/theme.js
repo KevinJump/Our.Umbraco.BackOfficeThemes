@@ -1,1 +1,1 @@
-themeFavicon('2E7C31');
+themeFavicon('003c8f');
