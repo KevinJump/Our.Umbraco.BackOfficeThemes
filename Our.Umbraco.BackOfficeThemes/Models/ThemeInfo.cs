@@ -1,6 +1,10 @@
-﻿namespace Our.Umbraco.BackOfficeThemes.Models
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+
+namespace Our.Umbraco.BackOfficeThemes.Models
 {
-    public class ThemeInfo 
+    [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
+    public class ThemeInfo
     {
         public string Alias { get; set; }
         public string Name { get; set; }

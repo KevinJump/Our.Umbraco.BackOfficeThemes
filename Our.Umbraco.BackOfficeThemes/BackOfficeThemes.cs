@@ -26,6 +26,9 @@ namespace Our.Umbraco.BackOfficeThemes
 
     }
 
+#if NETFRAMEWORK
+    [RuntimeLevel(MinLevel = RuntimeLevel.Run)]
+#endif
     public class BackOfficeThemesComposer : IComposer
     {
 #if NETCOREAPP
@@ -43,6 +46,8 @@ namespace Our.Umbraco.BackOfficeThemes
         {
             composition.RegisterUnique<IBackOfficeThemesRepository, BackOfficeThemesRepository>();
             composition.RegisterUnique<BackOfficeThemeService>();
+
+            composition.Components().Append<BackOfficeThemeComponent>();
         }
 
 #endif

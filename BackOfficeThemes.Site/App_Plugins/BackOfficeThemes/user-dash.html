@@ -13,9 +13,9 @@
                 {{vm.theme.name}}
             </umb-box-header>
             <umb-box-content>
-                <div class="flex justify-between">
+                <div class="flex justify-between" ng-if="vm.theme">
                     <div class="current-theme flx-b5">
-                        <img src="{{vm.theme.image}}" />
+                        <img ng-src="{{vm.theme.image}}" />
                         <p class="mt2">{{vm.theme.description}}</p>
                     </div>
                     <div class="flx-b5 flex justify-center">

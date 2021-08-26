@@ -61,7 +61,7 @@ namespace Our.Umbraco.BackOfficeThemes
 
             var urlHelper = new UrlHelper(new RequestContext(new HttpContextWrapper(HttpContext.Current), new RouteData()));
 
-            e.Add("translationManager", new Dictionary<string, object>
+            e.Add("backOfficeThemes", new Dictionary<string, object>
                 {
                     { "themeFolder", _themeService.ThemesFolder },
                     { "enabled", _themeService.Enabled },

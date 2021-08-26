@@ -22,27 +22,23 @@ namespace Our.Umbraco.BackOfficeThemes
         private readonly IKeyValueService _keyValueService;
         private readonly IMigrationPlanExecutor _migrationPlanExecutor;
 
-        private readonly IRuntimeState _runtimeState;
-
         private readonly BackOfficeThemeService _themeService;
 
         public BackOfficeNotificationHandler(IScopeProvider scopeProvider,
             IKeyValueService keyValueService,
             IMigrationPlanExecutor migrationPlanExecutor,
-            IRuntimeState runtimeState,
             BackOfficeThemeService themeService)
         {
             _scopeProvider = scopeProvider;
             _keyValueService = keyValueService;
             _migrationPlanExecutor = migrationPlanExecutor;
-            _runtimeState = runtimeState;
 
             _themeService = themeService;
         }
 
         public void Handle(UmbracoApplicationStartingNotification notification)
         {
-            if (_runtimeState.Level == RuntimeLevel.Run)
+            if (notification.RuntimeLevel == RuntimeLevel.Run)
             {
                 var upgrader = new Upgrader(new BackOfficeThemesMigrationPlan());
                 upgrader.Execute(_migrationPlanExecutor, _scopeProvider, _keyValueService);
