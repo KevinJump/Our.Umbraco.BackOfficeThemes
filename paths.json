@@ -3,7 +3,8 @@
       "Our.Umbraco.BackOfficeThemes/App_Plugins"
     ],
     "destinations" : [
-      "BackOfficeThemes.Site/App_Plugins"
+      "BackOfficeThemes.Site/App_Plugins",
+      "BackOfficeThemesv8.Site/App_Plugins"
     ]
 }
   

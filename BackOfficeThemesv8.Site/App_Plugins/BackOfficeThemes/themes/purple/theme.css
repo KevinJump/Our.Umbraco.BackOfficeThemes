@@ -1,0 +1,18 @@
+@import "../material-light.css";
+
+:root {
+    /* primary colours */
+    --color-primary: #512da8;
+    --color-primary-text: var(--color-text-light);
+    --color-primary-light: #8559da;
+    --color-primary-light-text: var(--color-text-dark);
+    --color-primary-dark: #140078;
+    --color-primary-dark-text: var(--color-text-light);
+    /* secondary colours */
+    --color-secondary: #e91e63;
+    --color-secondary-text: var(--color-text-light);
+    --color-secondary-light: #ff6090;
+    --color-secondary-light-text: var(--color-text-dark);
+    --color-secondary-dark: #b0003a;
+    --color-secondary-dark-text: var(--color-text-light);
+}

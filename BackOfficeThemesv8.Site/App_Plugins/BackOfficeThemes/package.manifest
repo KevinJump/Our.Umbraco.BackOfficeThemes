@@ -1,0 +1,27 @@
+{
+  "javascript": [
+    "~/App_Plugins/BackOfficeThemes/faviconColours.js",
+    "~/App_Plugins/BackOfficeThemes/themeService.js",
+    "~/App_Plugins/BackOfficeThemes/themeDashboardController.js",
+    "~/App_Plugins/BackOfficeThemes/userDashboardController.js",
+    "~/App_Plugins/BackOfficeThemes/themeloader.js"
+  ],
+  "css": [
+    "~/App_Plugins/BackofficeThemes/dashboard.css"
+  ],
+  
+  "dashboards": [
+    {
+      "alias": "backofficeThemeDashboard",
+      "view": "~/App_Plugins/BackOfficeThemes/dashboard.html",
+      "sections": [ "settings" ],
+      "weight": 15
+    },
+    {
+      "alias": "backOfficeThemeUserDashboard",
+      "view": "~/App_Plugins/BackOfficeThemes/user-dash.html",
+      "sections": [ "user-dialog" ],
+      "weight": 10
+    }
+  ]
+}

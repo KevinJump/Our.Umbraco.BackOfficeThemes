@@ -1,0 +1,64 @@
+<div ng-controller="backofficeThemeUserDashboardController as vm">
+    <div ng-if="!vm.enabled">
+
+        <h3>Themes disabled</h3>
+        <p>
+            Personalized themes have been disabled by your adminstrator
+        </p>
+    </div>
+
+    <div ng-if="vm.enabled">
+        <umb-box ng-if="vm.mode == 'show'">
+            <umb-box-header title="Current Theme">
+                {{vm.theme.name}}
+            </umb-box-header>
+            <umb-box-content>
+                <div class="flex justify-between" ng-if="vm.theme">
+                    <div class="current-theme flx-b5">
+                        <img ng-src="{{vm.theme.image}}" />
+                        <p class="mt2">{{vm.theme.description}}</p>
+                    </div>
+                    <div class="flx-b5 flex justify-center">
+                        <div>
+                            <div>
+                                <umb-button action="vm.pickTheme()"
+                                            label="Change Theme"
+                                            button-style="action block"
+                                            type="button"></umb-button>
+                            </div>
+                            <div class="mt2">
+                                <umb-button action="vm.reset()"
+                                            label="Reset"
+                                            button-style="info block"
+                                            type="button"></umb-button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </umb-box-content>
+        </umb-box>
+
+        <div ng-if="vm.mode == 'pick'">
+            <div class="bo-theme-list-view">
+                <umb-box ng-repeat="theme in vm.themes" class="bo-theme-box">
+                    <umb-box-header title="{{theme.name}}">
+                        <em>{{theme.alias}}</em>
+                        <strong ng-if="vm.theme.alias === theme.alias">(Current)</strong>
+                    </umb-box-header>
+                    <umb-box-content>
+                        <div>
+                            {{theme.description}}
+                        </div>
+                        <img class="theme-image" ng-src="{{theme.image}}" />
+                    </umb-box-content>
+                    <umb-box-content>
+                        <div class="text-right">
+                            <button ng-if="vm.theme.alias !== theme.alias" ng-click="vm.apply(theme.alias)" class="btn btn-success">Apply</button>
+                        </div>
+                    </umb-box-content>
+                </umb-box>
+            </div>
+        </div>
+    </div>
+</div>
