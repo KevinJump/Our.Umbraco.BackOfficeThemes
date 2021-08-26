@@ -455,3 +455,8 @@ $RECYCLE.BIN/
 
 # Umbraco bits. 
 [Uu]mbraco
+
+# don't checkin the builds
+[Dd]ist/*
+![Dd]ist/package.xml
+![Dd]ist/*.ps1

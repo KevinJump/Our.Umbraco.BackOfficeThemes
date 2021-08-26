@@ -48,13 +48,8 @@
 	<ItemGroup>
 		<Content Include="App_Plugins\BackOfficeThemes\**\*.*">
 			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-			<CopyToPublishDirectory>Always</CopyToPublishDirectory>
+			<CopyToPublishDirectory>Always</CopyToPublishDirectory>			
 		</Content>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Content Remove="App_Plugins\BackOfficeThemes\user-dash.html" />
-	  <Content Remove="App_Plugins\BackOfficeThemes\userDashboardController.js" />
 	</ItemGroup>
 
 	<!-- Workaround for this bug (replace the analyzer name with the one you need to exclude (filename only, no extension) -->
