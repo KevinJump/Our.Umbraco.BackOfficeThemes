@@ -12,13 +12,13 @@ using Umbraco.Cms.Web.Common.Attributes;
 #else
 using System.Web.Http;
 using Umbraco.Web.Mvc;
-using Umbraco.Web.WebApi;
+using Umbraco.Web.Editors;
 #endif
 
 namespace Our.Umbraco.BackOfficeThemes.Controllers
 {
     [PluginController("Themes")]
-    public class BackOfficeThemeApiController : UmbracoAuthorizedApiController
+    public class BackOfficeThemeApiController : UmbracoAuthorizedJsonController
     {
 
         private readonly BackOfficeThemeService _themeService;
