@@ -35,7 +35,7 @@
 
 
 	<ItemGroup Condition="$(TargetFramework) == 'net5.0'">
-		<PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.0.0-rc004" />
+		<PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.0.0" />
 	</ItemGroup>
 
 	<ItemGroup Condition="$(TargetFramework) == 'net472'">
