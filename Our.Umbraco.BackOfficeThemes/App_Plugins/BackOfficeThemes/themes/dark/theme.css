@@ -612,7 +612,7 @@ table thead a {
 /* users */
 .umb-user-card__content {
     background-color: var(--color-300);
-    color: var(600);
+    color: var(--color-600);
 }
 /* the dashboard */
 .umb-dashboard-grid .post-card,
@@ -648,3 +648,216 @@ div.mce-edit-area,
     color: var(--color-800) !important;
     background-color: var(--color-400) !important;
 }
+
+/* ace Code editor theme */
+/* based on the 'One Dark' theme - https://github.com/ajaxorg/ace-builds/tree/master/css/theme */
+.ace-chrome {
+    --aceBackground: #1E1E1E;
+    --aceGutterBackground: #333333;
+    --aceText: #abb2bf;
+    --aceGutterText: #6a6f7a;
+    --aceCursor: #528bff;
+    --aceTextSelection: #264F78;
+    --aceStart: #282c34;
+    --aceStep: #c6dbae;
+    --aceBracket: #747369;
+    --aceActiveLine: rgba(76, 87, 103, .19);
+    --aceSelectedWord: #3d4350;
+    --aceFold: #61afef;
+    --aceFoldBorder: #abb2bf;
+    --aceKeyword: #c678dd;
+    --aceOperator: #DCDCDC;
+    --aceUnit: #d19a66;
+    --aceLanguage: #d19a66;
+    --aceNumeric: #d19a66;
+    --aceCharacter: #56b6c2;
+    --aceOther: #56b6c2;
+    --aceFunction: #61afef;
+    --aceConstant: #d19a66;
+    --aceClass: #e5c07b;
+    --aceType: #e5c07b;
+    --aceStorage: #c678dd;
+    --aceStorageType: #c678dd;
+    --aceInvalid: #fff;
+    --aceInvalidBackground: #f2777a;
+    --aceDeprecated: #272b33;
+    --aceDeprecatedBackground: #d27b53;
+    --aceString: #98c379;
+    --aceStringRegex: #e06c75;
+    --aceComment: #608B4E;
+    --aceVariable: #e06c75;
+    --aceParameter: #d19a66;
+    --aceMetaTag: #e06c75;
+    --aceAttributeName: #e06c75;
+    --aceTag: #e06c75;
+    --aceMarkupHeading: #98c379;
+    --aceIndentGuide: #9B9B9B;
+    --aceRazor: #D2D295;
+    --aceString: #D69D85;
+}
+
+.ace-chrome {
+    background-color: var(--aceBackground) !important;
+    color: var(--aceText) !important;
+}
+
+    .ace-chrome .ace_gutter {
+        background: var(--aceGutterBackground) !important;
+        color: var(--aceGutterText) !important;
+    }
+
+    .ace-chrome .ace_cursor {
+        color: var(--aceCursor) !important;
+    }
+
+    .ace-chrome .ace_marker-layer .ace_selection {
+        background: var(--aceTextSelection) !important;
+    }
+
+    .ace-chrome.ace_multiselect .ace_selection.ace_start {
+        box-shadow: 0 0 3px 0 var(--aceStart) !important;
+        border-radius: 2px !important;
+    }
+
+    .ace-chrome .ace_marker-layer .ace_step {
+        background: var(--aceStep) !important;
+    }
+
+    .ace-chrome .ace_marker-layer .ace_bracket {
+        margin: -1px 0 0 -1px !important;
+        border: 1px solid var(--aceBracket) !important;
+    }
+
+    .ace-chrome .ace_marker-layer .ace_active-line {
+        background: var(--aceActiveLine) !important;
+    }
+
+    .ace-chrome .ace_gutter-active-line {
+        background-color: var(--aceActiveLine) !important;
+    }
+
+    .ace-chrome .ace_marker-layer .ace_selected-word {
+        border: 1px solid var(--aceSelectedWord) !important;
+    }
+
+    .ace-chrome .ace_fold {
+        background-color: var(--aceFold) !important;
+        border-color: var(--aceFoldBorder) !important;
+    }
+
+    .ace-chrome .ace_keyword {
+        color: var(--aceKeyword) !important;
+    }
+
+        .ace-chrome .ace_keyword.ace_operator {
+            color: var(--aceOperator) !important;
+        }
+
+        .ace-chrome .ace_keyword.ace_other.ace_unit {
+            color: var(--aceUnit) !important;
+        }
+
+    .ace-chrome .ace_constant.ace_language {
+        color: var(--aceLanguage) !important;
+    }
+
+    .ace-chrome .ace_constant.ace_numeric {
+        color: var(--aceNumeric) !important;
+    }
+
+    .ace-chrome .ace_constant.ace_character {
+        color: var(--aceCharacter) !important;
+    }
+
+    .ace-chrome .ace_constant.ace_other {
+        color: var(--aceOther) !important;
+    }
+
+    .ace-chrome .ace_support.ace_function {
+        color: var(--aceFunction) !important;
+    }
+
+    .ace-chrome .ace_support.ace_constant {
+        color: var(--aceConstant) !important;
+    }
+
+    .ace-chrome .ace_support.ace_class {
+        color: var(--aceClass) !important;
+    }
+
+    .ace-chrome .ace_support.ace_type {
+        color: var(--aceType) !important;
+    }
+
+    .ace-chrome .ace_storage {
+        color: var(--aceStorage) !important;
+    }
+
+        .ace-chrome .ace_storage.ace_type {
+            color: var(--aceStorageType) !important;
+        }
+
+    .ace-chrome .ace_invalid {
+        color: var(--aceInvalid) !important;
+        background-color: var(--aceInvalidBackground) !important;
+    }
+
+        .ace-chrome .ace_invalid.ace_deprecated {
+            color: var(--aceDeprecated) !important;
+            background-color: var(--aceDeprecatedBackground) !important;
+        }
+
+    .ace-chrome .ace_string {
+        color: var(--aceString) !important;
+    }
+
+        .ace-chrome .ace_string.ace_regexp {
+            color: var(--aceStringRegex) !important;
+        }
+
+    .ace-chrome .ace_comment {
+        font-style: italic !important;
+        color: var(--aceComment) !important;
+    }
+
+    .ace-chrome .ace_variable {
+        color: var(--aceVariable) !important;
+    }
+
+        .ace-chrome .ace_variable.ace_parameter {
+            color: var(--aceParameter) !important;
+        }
+
+    .ace-chrome .ace_meta.ace_tag {
+        color: var(--aceMetaTag) !important;
+    }
+
+    .ace-chrome .ace_entity.ace_other.ace_attribute-name {
+        color: var(--aceAttributeName) !important;
+    }
+
+    .ace-chrome .ace_entity.ace_name.ace_function {
+        color: var(--aceFunction) !important;
+    }
+
+    .ace-chrome .ace_entity.ace_name.ace_tag {
+        color: var(--aceTag) !important;
+    }
+
+    .ace-chrome .ace_markup.ace_heading {
+        color: var(--aceMarkupHeading) !important;
+    }
+
+    .ace-chrome .ace_indent-guide {
+        border-right: 1px dotted var(--aceIndentGuide) !important;
+        background: none !important;
+    }
+
+    .ace-chrome .ace_razor {
+        background: var(--aceRazor) !important;
+        color: #000000 !important;
+    }
+
+    .ace-chrome .ace_string {
+        color: var(--aceString) !important;
+    }
