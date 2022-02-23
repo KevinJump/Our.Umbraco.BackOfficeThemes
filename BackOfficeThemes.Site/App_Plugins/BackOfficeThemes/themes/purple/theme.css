@@ -16,3 +16,9 @@
     --color-secondary-dark: #b0003a;
     --color-secondary-dark-text: var(--color-text-light);
 }
+
+/* make the icon dark */
+.umb-app-header__logo img {
+    filter: invert(8%) sepia(88%) saturate(4014%) hue-rotate(252deg) brightness(90%) contrast(126%);
+}
+

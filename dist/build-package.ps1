@@ -39,3 +39,5 @@ if ($push) {
     $feedUrl = "https://pkgs.dev.azure.com/jumoo/Public/_packaging/nightly/nuget/v3/index.json";
     &nuget.exe push "$outfolder\*.nupkg" -ApiKey AzureDevOps -src $feedUrl
 }
+
+XCOPY "$outfolder\*.nupkg" "c:\source\localgit" /y

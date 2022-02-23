@@ -16,6 +16,10 @@
     --alt-200: #235f90;
 }
 
+.umb-app-header__logo img {
+    filter: invert(90%) sepia(0%) saturate(1142%) hue-rotate(150deg) brightness(101%) contrast(85%);
+}
+
 body {
     color: var(--color-600);
 }

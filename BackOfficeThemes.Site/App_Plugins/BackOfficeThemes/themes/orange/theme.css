@@ -16,3 +16,9 @@
     --color-secondary-dark: #bb4d00;
     --color-secondary-dark-text: var(--color-text-light);
 }
+
+/* makes thead icon dark orange */
+.umb-app-header__logo img {
+    filter: invert(28%) sepia(62%) saturate(7033%) hue-rotate(7deg) brightness(93%) contrast(115%);
+}
+

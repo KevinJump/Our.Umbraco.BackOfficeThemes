@@ -22,7 +22,7 @@ namespace Our.Umbraco.BackOfficeThemes
     {
         internal const string TableName = "Themes_UserConfig";
 
-        internal const string ThemesFolder = "/App_Plugins/BackOfficeThemes/Themes";
+        internal const string ThemesFolder = "/App_Plugins/BackOfficeThemes/themes";
 
     }
 

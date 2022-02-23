@@ -7,7 +7,7 @@
     "~/App_Plugins/BackOfficeThemes/themeloader.js"
   ],
   "css": [
-    "~/App_Plugins/BackofficeThemes/dashboard.css"
+    "~/App_Plugins/BackOfficeThemes/dashboard.css"
   ],
   
   "dashboards": [
