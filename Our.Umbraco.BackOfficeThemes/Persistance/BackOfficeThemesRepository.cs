@@ -5,8 +5,13 @@ using Our.Umbraco.BackOfficeThemes.Models;
 using System;
 using System.Linq;
 
-#if NETCOREAPP
+#if NET6_0_OR_GREATER
+using Umbraco.Cms.Infrastructure.Scoping;
+#elif NET5_0
 using Umbraco.Cms.Core.Scoping;
+#endif
+
+#if NETCOREAPP
 using Umbraco.Cms.Infrastructure.Persistence;
 using Umbraco.Cms.Infrastructure.Persistence.SqlSyntax;
 using Umbraco.Extensions;
