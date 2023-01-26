@@ -1,4 +1,6 @@
-﻿using Our.Umbraco.BackOfficeThemes.Persistance;
+﻿using Microsoft.Extensions.DependencyInjection;
+
+using Our.Umbraco.BackOfficeThemes.Persistance;
 using Our.Umbraco.BackOfficeThemes.Services;
 
 #if NETCOREAPP
@@ -35,7 +37,9 @@ namespace Our.Umbraco.BackOfficeThemes
         public void Compose(IUmbracoBuilder builder)
         {
             builder.Services.AddUnique<IBackOfficeThemesRepository, BackOfficeThemesRepository>();
-            builder.Services.AddUnique<BackOfficeThemeService>();
+            builder.Services.AddSingleton<BackOfficeThemeService>();
+
+            // builder.Services.AddUnique<BackOfficeThemeService>();
 
             builder.AddNotificationHandler<UmbracoApplicationStartingNotification, BackOfficeNotificationHandler>();
             builder.AddNotificationHandler<ServerVariablesParsingNotification, BackOfficeNotificationHandler>();
