@@ -4,7 +4,9 @@
     ],
     "destinations" : [
       "BackOfficeThemes.Site/App_Plugins",
-      "BackOfficeThemesv8.Site/App_Plugins"
+      "BackOfficeThemesv8.Site/App_Plugins",
+      "BackOfficeThemesv10.Site/App_Plugins",
+      "BackOfficeThemesv11.Site/App_Plugins"
     ]
 }
   
