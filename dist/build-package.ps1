@@ -28,8 +28,10 @@ $umbpackFile = $package.Replace("-", "_") + "_" + $versionString.Replace("-", "_
 $project = "..\$package\$package.csproj"
 $outFolder = ".\$versionString"
 
+$buildParams = "ContinuousIntegrationBuild=true,version=$versionString"
+
 # pack the thing
-dotnet pack $project -c $config -o $outFolder /p:ContinuousIntegrationBuild=true,version=$versionString
+dotnet pack $project -c $config -o $outFolder /p:$buildParams
 
 # v8 package
 &umbpack pack .\package.xml -v $versionString -n $outFolder\$umbpackFile
