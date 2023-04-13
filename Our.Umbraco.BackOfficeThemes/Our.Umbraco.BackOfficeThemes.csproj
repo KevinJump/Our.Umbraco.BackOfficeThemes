@@ -14,12 +14,13 @@
 		<PackageIconUrl></PackageIconUrl>
 		<PackageLicenceExpression>MIT</PackageLicenceExpression>
 		<PackageProjectUrl>https://github.com/KevinJump/Our.Umbraco.BackOfficeThemes</PackageProjectUrl>
-		<PackageTags>Umbraco</PackageTags>
+		<PackageTags>Umbraco umbraco-marketplace</PackageTags>
 
 		<Description>Themes for the Umbraco Backoffice - set per user.</Description>
 		<PackageReleaseNotes>
 			1.0 - Initial Release
 			2.0 - DB Version, Targets both Umbraco v8 and v9
+			3.0 - v10/11 version
 		</PackageReleaseNotes>
 
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
