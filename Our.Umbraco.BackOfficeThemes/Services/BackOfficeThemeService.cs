@@ -22,7 +22,11 @@ namespace Our.Umbraco.BackOfficeThemes.Services
 {
     public class BackOfficeThemeService
     {
+#if NET6_0_OR_GREATER
+        private ICoreScopeProvider _scopeProvider;
+#else
         private IScopeProvider _scopeProvider;
+#endif
         private IBackOfficeThemesRepository _themeRepository;
         
         private string _themesFolder = BackOfficeThemes.ThemesFolder;
@@ -36,7 +40,11 @@ namespace Our.Umbraco.BackOfficeThemes.Services
         private readonly IConfiguration _configuration;
 
         public BackOfficeThemeService(
+#if NET6_0_OR_GREATER
+            ICoreScopeProvider scopeProvider,
+#else
             IScopeProvider scopeProvider,
+#endif
             IHostingEnvironment hostingEnvironment,
             IBackOfficeThemesRepository themesRepository,
             IConfiguration configuration)
@@ -49,7 +57,7 @@ namespace Our.Umbraco.BackOfficeThemes.Services
 
             LoadSettings();
         }
-#else 
+#else
 
         public BackOfficeThemeService(IScopeProvider scopeProvider,
             IBackOfficeThemesRepository themesRepository)
@@ -70,7 +78,11 @@ namespace Our.Umbraco.BackOfficeThemes.Services
 
         public UserThemeSettings GetSettings(int userId)
         {
+#if NET6_0_OR_GREATER
+            using (_scopeProvider.CreateCoreScope(autoComplete: true))
+#else
             using (_scopeProvider.CreateScope(autoComplete: true))
+#endif
             {
                 return _themeRepository.GetByUser(userId);
             }
@@ -78,7 +90,11 @@ namespace Our.Umbraco.BackOfficeThemes.Services
 
         public UserThemeSettings SaveSettings(int userId, string themeAlias)
         {
+#if NET6_0_OR_GREATER
+            using (_scopeProvider.CreateCoreScope(autoComplete: true))
+#else
             using (_scopeProvider.CreateScope(autoComplete: true))
+#endif
             {
 
                 var themeSettings = _themeRepository.GetByUser(userId);
@@ -99,7 +115,11 @@ namespace Our.Umbraco.BackOfficeThemes.Services
 
         public void Reset(int userId)
         {
+#if NET6_0_OR_GREATER
+            using (_scopeProvider.CreateCoreScope(autoComplete: true))
+#else
             using (_scopeProvider.CreateScope(autoComplete: true))
+#endif
             {
                 var settings = _themeRepository.GetByUser(userId);
                 if (settings != null)
@@ -166,7 +186,7 @@ namespace Our.Umbraco.BackOfficeThemes.Services
         {
 #if NETCOREAPP
             return _configuration.GetValue(key, defaultValue);
-#else 
+#else
             var value = ConfigurationManager.AppSettings[key];
             if (value != null)
             {

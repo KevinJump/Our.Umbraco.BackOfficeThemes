@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net6.0;net5.0;net472</TargetFrameworks>
+		<TargetFrameworks>net7.0;net6.0;net5.0;net472</TargetFrameworks>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -34,6 +34,10 @@
 		<None Include="docs\README.md" Pack="true" PackagePath="\"/>
 	</ItemGroup>
 
+
+	<ItemGroup Condition="$(TargetFramework) == 'net7.0'">
+		<PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="11.0.0" />
+	</ItemGroup>
 
 	<ItemGroup Condition="$(TargetFramework) == 'net6.0'">
 		<PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="10.0.0" />

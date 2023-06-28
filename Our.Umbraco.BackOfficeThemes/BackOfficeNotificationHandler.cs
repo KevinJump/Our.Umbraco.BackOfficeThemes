@@ -18,14 +18,25 @@ namespace Our.Umbraco.BackOfficeThemes
         : INotificationHandler<UmbracoApplicationStartingNotification>,
         INotificationHandler<ServerVariablesParsingNotification>
     {
+
+#if NET6_0_OR_GREATER
+        private readonly ICoreScopeProvider _scopeProvider;
+#else
         private readonly IScopeProvider _scopeProvider;
+#endif
         private readonly IKeyValueService _keyValueService;
         private readonly IMigrationPlanExecutor _migrationPlanExecutor;
 
         private readonly BackOfficeThemeService _themeService;
 
-        public BackOfficeNotificationHandler(IScopeProvider scopeProvider,
-            IKeyValueService keyValueService,
+        public BackOfficeNotificationHandler(
+#if NET6_0_OR_GREATER
+            ICoreScopeProvider scopeProvider,
+#else
+            IScopeProvider scopeProvider,
+           
+#endif
+            IKeyValueService keyValueService, 
             IMigrationPlanExecutor migrationPlanExecutor,
             BackOfficeThemeService themeService)
         {
