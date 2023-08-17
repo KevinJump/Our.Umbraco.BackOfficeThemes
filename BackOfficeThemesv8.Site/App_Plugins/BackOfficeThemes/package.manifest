@@ -12,12 +12,6 @@
   
   "dashboards": [
     {
-      "alias": "backofficeThemeDashboard",
-      "view": "~/App_Plugins/BackOfficeThemes/dashboard.html",
-      "sections": [ "settings" ],
-      "weight": 15
-    },
-    {
       "alias": "backOfficeThemeUserDashboard",
       "view": "~/App_Plugins/BackOfficeThemes/user-dash.html",
       "sections": [ "user-dialog" ],
